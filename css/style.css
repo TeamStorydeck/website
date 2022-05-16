@@ -1,0 +1,203 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Nunito Sans', sans-serif; */
+/* font-family: 'Salsa', cursive; */
+
+
+/* Global CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none!important;
+}
+
+:root {
+    --main-color: #673ab7;
+    --bg-dark: #2b2c2f;
+    --main-to-dark-color: var(--main-color);
+    --dark-to-main-color: var(--bg-dark);
+    --shadow-black-100: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-black-300: 0 5px 15px rgba(0,0,0,0.3);
+    --black-900: #000000;
+    --black-400: #555555;
+    --black-100: #f7f7f7;
+    --black-000: #ffffff;
+    --black-alpha-100: rgba(0,0,0,0.05);
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: white;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    background-color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-300);
+    font-weight: 700;
+}
+
+.btn:focus {
+    box-shadow: var(--shadow-black-300);
+}
+
+.btn:hover {
+    color: #ffffff;
+    background-color: var(--main-color);
+}
+
+@keyframes bounceTop_01 {
+    0%, 100% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--main-color);
+    padding: 20px 0;
+}
+
+
+/* For Sticky Navbar in case not working */
+/* .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  } */
+
+.navbar > .container {
+    padding: 2px 0;
+}
+
+.navbar .navbar-brand {
+    font-size: 30px;
+    font-family: 'Salsa', cursive;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-top: 3px;
+    margin-left: -72px;
+}
+
+.navbar .nav-item {
+    margin-left: 40px;
+}
+
+.navbar .nav-item .nav-link {
+    color: white;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+}
+
+.navbar .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background-color: white;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.navbar .nav-item .nav-link .active:hover::before, /*Problem 1: Not Enabling the section active status*/
+.navbar .nav-item .nav-link:hover::before {
+    transform: scale(1);
+}
+
+/* Home Section */
+
+.home {
+    min-height: 100vh;
+    padding: 140px 0;
+    background-color: white;
+}
+.home-text h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--black-900);
+    margin: 0 0 20px;
+}
+
+.home-text p {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--black-400);
+    margin: 0;
+    font-weight: 300;
+}
+
+.home .home-btn {
+    margin-top: 40px;
+}
+
+.home-img {
+    position: relative;
+}
+
+.home-img img {
+    max-width: 360px;
+    width: 100%;
+    margin-top: -25px;
+    animation: bounceTop_01 3s ease infinite;
+}
+
+/* home circle */
+/* 
+.home-img .circle {
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgba (255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-img .circle::before {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: rgba (255, 255, 255, 0.4);
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+} */
+

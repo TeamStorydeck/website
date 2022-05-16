@@ -1,2 +1,2 @@
-# website
-Website for Storydeck
+# storydeck-landing-page
+Storydeck App Website
